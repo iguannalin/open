@@ -42,8 +42,8 @@ div.door {
 .word {
   z-index: 50;
   position: absolute;
-  font-size: 220px;
-  width: 200px;
+  font-size: 150px;
+  width: 190px;
   text-align: center;
   line-break: anywhere;
   line-height: 65px;

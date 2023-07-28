@@ -16,12 +16,13 @@ window.addEventListener("load", () => {
 
   function openDoor() {
     door.style.transform = `rotateY(${yRotation+=1}deg)`;
-    word.style.opacity = 1;
+    if (yRotation >= 45) word.style.opacity = 1;
     if (yRotation >= 88) clearInterval(doorAnimation);
   }
 
   function onClickDoor() {
-    doorAnimation = setInterval(openDoor, 25);
+    doorAnimation = setInterval(openDoor, 15);
+    door.removeEventListener("click", onClickDoor);
   }
 
   function drawDoor() {
